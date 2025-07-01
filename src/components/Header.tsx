@@ -30,7 +30,7 @@ const MobileNav: React.FC<{
                 className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                 onClick={onClose}
             ></div>
-            <div className={`fixed top-0 right-0 h-full w-full max-w-xs bg-white dark:bg-primary-dark z-50 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`fixed top-0 right-0 h-full w-full max-w-xs bg-background-light dark:bg-background-dark z-50 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="flex justify-between items-center p-4 border-b dark:border-gray-700">
                     <h3 className="font-bold">Menu</h3>
                     <Button variant="ghost" size="icon" onClick={onClose}><Icons.X className="h-5 w-5"/></Button>
@@ -84,7 +84,7 @@ const UserMenu: React.FC<{onClose: () => void}> = ({onClose}) => {
     if (!user) return null;
 
     return (
-        <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-primary-dark rounded-md shadow-lg py-1 border dark:border-gray-700">
+        <div className="absolute right-0 mt-2 w-56 bg-background-light dark:bg-background-dark rounded-md shadow-lg py-1 border dark:border-gray-700">
             <div className="px-4 py-2 border-b dark:border-gray-700">
                 <p className="text-sm font-semibold text-primary-dark dark:text-white truncate">Hi, {user.name.split(' ')[0]}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{user.email}</p>
